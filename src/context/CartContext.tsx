@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react';
 
 /* ═══ Types ═══ */
 export interface Product {
@@ -19,6 +19,7 @@ export interface UserData {
   address: string;
   note: string;
   paymentMethod: string;
+  isGift: string;
 }
 
 interface CartContextType {
@@ -42,9 +43,29 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 /* ═══ Provider ═══ */
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>([]);
-  const [userData, setUserDataState] = useState<UserData>({ name: '', address: '', note: '', paymentMethod: '' });
+  // Inicializar carrito desde localStorage
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    const savedCart = localStorage.getItem('prushi_cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // Inicializar datos de usuario desde localStorage
+  const [userData, setUserDataState] = useState<UserData>(() => {
+    const savedUser = localStorage.getItem('prushi_user');
+    return savedUser ? JSON.parse(savedUser) : { name: '', address: '', note: '', paymentMethod: '', isGift: 'No' };
+  });
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // Persistir cambios en el carrito
+  useEffect(() => {
+    localStorage.setItem('prushi_cart', JSON.stringify(cart));
+  }, [cart]);
+
+  // Persistir cambios en los datos del usuario
+  useEffect(() => {
+    localStorage.setItem('prushi_user', JSON.stringify(userData));
+  }, [userData]);
 
   const addToCart = useCallback((product: Product) => {
     setCart(prev => {

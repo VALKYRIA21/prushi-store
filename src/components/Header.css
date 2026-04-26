@@ -2,13 +2,15 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(249, 248, 246, 0.85);
+  background: var(--color-bg);
+  opacity: 0.95;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border-light);
   height: var(--header-height);
   display: flex;
   align-items: center;
+  transition: background-color var(--transition-base);
 }
 
 .header__inner {
@@ -26,25 +28,6 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
-}
-
-.header__logo-mark {
-  width: 40px;
-  height: 40px;
-  background: var(--color-cta);
-  color: var(--color-cta-text);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: -0.5px;
-  transition: transform var(--transition-fast);
-}
-
-.header__brand:hover .header__logo-mark {
-  transform: scale(1.05);
 }
 
 .header__logo-text {
@@ -103,7 +86,14 @@
   width: 100%;
 }
 
-/* Cart button */
+/* Actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header__theme-btn,
 .header__cart-btn {
   position: relative;
   width: 44px;
@@ -116,6 +106,7 @@
   transition: all var(--transition-fast);
 }
 
+.header__theme-btn:hover,
 .header__cart-btn:hover {
   background: var(--color-border-light);
   color: var(--color-cta);

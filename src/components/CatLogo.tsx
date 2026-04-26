@@ -3,8 +3,8 @@ interface CatLogoProps {
 }
 
 export default function CatLogo({ size = 40 }: CatLogoProps) {
-  const c = '#AE8F73'; // color-cta from palette
-  const w = '2.2';     // stroke width
+  const c = 'var(--color-cta)'; // color-cta from palette
+  const w = '2.2';              // stroke width
 
   return (
     <svg

@@ -41,17 +41,29 @@ export default function CartDrawer() {
 
     const baseNumber = "584168279049"; // Número con código de país
 
+    const paymentDetails: Record<string, string> = {
+      'Pago Móvil': 'Banco Mercantil, 0416-8279049, V-12345678',
+      'Efectivo': 'Acordar entrega para pago en efectivo',
+      'PayPal': 'pagos@prushistore.com',
+      'Zelle': 'zelle@prushistore.com (Prushi Store LLC)',
+      'Binance': 'ID: 123456789 o pagos@prushistore.com',
+      'Zinli': 'pagos@prushistore.com',
+      'Wally': '0416-8279049'
+    };
+
     const itemsText = cart
       .map(item => `- ${item.name} (x${item.quantity}) — $${(item.price * item.quantity).toFixed(2)}`)
       .join('%0A');
 
     const paymentLabel = userData.paymentMethod || 'No especificado';
+    const accountDetails = userData.paymentMethod ? `%0A*Datos de pago:* ${paymentDetails[userData.paymentMethod]}` : '';
+    const giftText = userData.isGift === 'Sí' ? '%0A*¿Es regalo?:* Sí 🎁' : '';
     const noteText = userData.note.trim() ? `%0A*Nota:* ${userData.note}` : '';
 
     const message = `*Pedido de Skincare — Prushi Store*%0A%0A` +
       `*Nombre:* ${userData.name}%0A` +
       `*Ubicación:* ${userData.address}%0A` +
-      `*Método de pago:* ${paymentLabel}%0A%0A` +
+      `*Método de pago:* ${paymentLabel}${accountDetails}${giftText}%0A%0A` +
       `*Productos:*%0A${itemsText}%0A%0A` +
       `*Total:* $${totalPrice.toFixed(2)}` +
       noteText;
@@ -201,6 +213,18 @@ export default function CartDrawer() {
                   </select>
                 </div>
                 <div className="drawer__field">
+                  <label htmlFor="user-gift" className="drawer__label">¿Es para un regalo?</label>
+                  <select
+                    id="user-gift"
+                    className="drawer__select"
+                    value={userData.isGift}
+                    onChange={(e) => setUserData({ ...userData, isGift: e.target.value })}
+                  >
+                    <option value="No">No</option>
+                    <option value="Sí">Sí, es un regalo 🎁</option>
+                  </select>
+                </div>
+                <div className="drawer__field">
                   <label htmlFor="user-note" className="drawer__label">Nota (opcional)</label>
                   <textarea
                     id="user-note"
@@ -232,6 +256,9 @@ export default function CartDrawer() {
               <MessageCircle size={18} strokeWidth={2} />
               <span>Finalizar por WhatsApp</span>
             </button>
+            <p className="drawer__shipping-notice">
+              ✨ Los productos se envían  2 horas después de hacerse el pago.
+            </p>
             {!isFormValid && (
               <p className="drawer__form-hint">
                 Completa tu nombre y dirección para continuar
