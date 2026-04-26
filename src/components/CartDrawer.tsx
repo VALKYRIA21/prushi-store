@@ -39,7 +39,7 @@ export default function CartDrawer() {
       return;
     }
 
-    const baseNumber = "584168279049"; // Número con código de país
+    const baseNumber = ""; // Número con código de país
 
     const paymentDetails: Record<string, string> = {
       'Pago Móvil': 'Banco Mercantil, 0416-8279049, V-12345678',
