@@ -12,6 +12,14 @@
   overflow: hidden;
 }
 
+.product-card--out-of-stock {
+  opacity: 0.75;
+}
+
+.product-card--out-of-stock .product-card__icon-bg {
+  filter: grayscale(100%);
+}
+
 .product-card::before {
   content: '';
   position: absolute;
@@ -69,6 +77,33 @@
   border-radius: var(--radius-full);
 }
 
+.product-card__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.product-card__stock-tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-success);
+  letter-spacing: 0.5px;
+}
+
+.product-card__stock-tag--low {
+  background: rgba(194, 112, 112, 0.15);
+  color: var(--color-danger);
+}
+
+.product-card__stock-tag--out {
+  background: var(--color-border);
+  color: var(--color-text-muted);
+}
+
 /* Info */
 .product-card__info {
   flex: 1;
@@ -91,6 +126,21 @@
   color: var(--color-text-muted);
 }
 
+.product-card__features {
+  margin-top: var(--space-xs);
+  padding-left: var(--space-md);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-card__features li {
+  line-height: 1.4;
+}
+
 /* Footer */
 .product-card__footer {
   display: flex;
@@ -105,6 +155,31 @@
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.5px;
+}
+
+.product-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.product-card__ingredients-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.product-card__ingredients-btn:hover {
+  background: var(--color-border-light);
+  color: var(--color-cta);
+  border-color: var(--color-cta);
 }
 
 .product-card__add-btn {
@@ -140,6 +215,14 @@
   background: #5A7E60;
 }
 
+.product-card__add-btn:disabled {
+  background: var(--color-border);
+  color: var(--color-text-light);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .product-card {
@@ -162,6 +245,16 @@
 
   .product-card__price {
     font-size: 18px;
+  }
+
+  .product-card__ingredients-btn {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .product-card__ingredients-btn svg {
+    width: 16px;
+    height: 16px;
   }
 
   .product-card__add-btn {

@@ -1,14 +1,9 @@
 import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react';
 
-/* ═══ Types ═══ */
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  icon: string; // Lucide icon name
-  category: string;
-}
+import type { Product } from '../data/products';
+
+// Export it again so other files that import it from here don't break
+export type { Product };
 
 export interface CartItem extends Product {
   quantity: number;
@@ -71,13 +66,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setCart(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
+        if (existing.quantity >= product.stock) return prev;
         return prev.map(item =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
-      return [...prev, { ...product, quantity: 1 }];
+      if (product.stock > 0) {
+        return [...prev, { ...product, quantity: 1 }];
+      }
+      return prev;
     });
   }, []);
 
@@ -92,7 +91,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
     setCart(prev =>
       prev.map(item =>
-        item.id === productId ? { ...item, quantity } : item
+        item.id === productId ? { ...item, quantity: Math.min(quantity, item.stock) } : item
       )
     );
   }, []);
@@ -106,7 +105,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const closeDrawer = useCallback(() => setIsDrawerOpen(false), []);
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const totalPrice = cart.reduce((sum, item) => sum + (item.price || 0) * item.quantity, 0);
 
   return (
     <CartContext.Provider

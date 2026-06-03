@@ -46,6 +46,17 @@
   gap: 4px;
 }
 
+.footer__link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--color-cta);
+}
+
 .footer__heart {
   color: var(--color-danger);
   display: inline-block;

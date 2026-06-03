@@ -13,7 +13,7 @@ export default function Footer() {
           <span className="footer__name">Prushi Store</span>
         </div>
         <p className="footer__copy">
-          Hecho con <Heart size={13} strokeWidth={2.5} className="footer__heart" /> en Venezuela
+          Hecho por <a href="https://github.com/VALKYRIA21" target="_blank" rel="noopener noreferrer" className="footer__link">VALKYRIA21</a> con <Heart size={13} strokeWidth={2.5} className="footer__heart" /> en Venezuela
           &nbsp;·&nbsp; © {year}
         </p>
       </div>
