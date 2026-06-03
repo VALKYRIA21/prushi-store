@@ -30,7 +30,6 @@ interface CartContextType {
   openDrawer: () => void;
   closeDrawer: () => void;
   totalItems: number;
-  totalPrice: number;
 }
 
 /* ═══ Context ═══ */
@@ -105,7 +104,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const closeDrawer = useCallback(() => setIsDrawerOpen(false), []);
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cart.reduce((sum, item) => sum + (item.price || 0) * item.quantity, 0);
 
   return (
     <CartContext.Provider
@@ -122,7 +120,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
         openDrawer,
         closeDrawer,
         totalItems,
-        totalPrice,
       }}
     >
       {children}

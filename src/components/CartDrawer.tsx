@@ -12,7 +12,6 @@ export default function CartDrawer() {
     updateQuantity,
     removeFromCart,
     setUserData,
-    totalPrice,
   } = useCart();
 
   const drawerRef = useRef<HTMLDivElement>(null);
@@ -52,7 +51,7 @@ export default function CartDrawer() {
     };
 
     const itemsText = cart
-      .map(item => `- ${item.name} (x${item.quantity})${item.price !== undefined ? ` — $${(item.price * item.quantity).toFixed(2)}` : ''}`)
+      .map(item => `- ${item.name} (x${item.quantity})`)
       .join('%0A');
 
     const paymentLabel = userData.paymentMethod || 'No especificado';
@@ -65,7 +64,6 @@ export default function CartDrawer() {
       `*Ubicación:* ${userData.address}%0A` +
       `*Método de pago:* ${paymentLabel}${accountDetails}${giftText}%0A%0A` +
       `*Productos:*%0A${itemsText}%0A%0A` +
-      (totalPrice > 0 ? `*Total:* $${totalPrice.toFixed(2)}\n\n` : '') +
       noteText;
 
     window.open(`https://wa.me/${baseNumber}?text=${message}`, '_blank');
@@ -132,11 +130,6 @@ export default function CartDrawer() {
                   <li key={item.id} className="drawer__item" id={`cart-item-${item.id}`}>
                     <div className="drawer__item-info">
                       <span className="drawer__item-name">{item.name}</span>
-                      {item.price !== undefined && (
-                        <span className="drawer__item-price">
-                          ${(item.price * item.quantity).toFixed(2)}
-                        </span>
-                      )}
                     </div>
                     <div className="drawer__item-actions">
                       <div className="drawer__qty-controls">
@@ -245,12 +238,6 @@ export default function CartDrawer() {
         {/* Footer */}
         {cart.length > 0 && (
           <div className="drawer__footer">
-            {totalPrice > 0 && (
-              <div className="drawer__total-row">
-                <span className="drawer__total-label">Total</span>
-                <span className="drawer__total-value">${totalPrice.toFixed(2)}</span>
-              </div>
-            )}
             <button
               className={`drawer__checkout-btn ${!isFormValid ? 'drawer__checkout-btn--disabled' : ''}`}
               onClick={handleCheckout}
