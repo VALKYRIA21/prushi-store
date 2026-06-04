@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plus, Info, X } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import * as Icons from "lucide-react";
 import { useCart } from "../context/CartContext";
 import type { Product } from "../context/CartContext";
