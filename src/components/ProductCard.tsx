@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import * as Icons from "lucide-react";
-import { useCart } from "../context/CartContext";
+//import { useCart } from "../context/CartContext";
 import type { Product } from "../context/CartContext";
 import IngredientsModal from "./IngredientsModal";
 import "./ProductCard.css";
