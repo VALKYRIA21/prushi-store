@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import ProductCard from './components/ProductCard';
 import CartDrawer from './components/CartDrawer';
 import Footer from './components/Footer';
-import { bestSellers, categories } from './data/products';
+import {categories } from './data/products';
 import './App.css';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Hero />
 
       {/* Best Sellers Section */}
-      <section className="catalog" id="catalogo">
+      {/* <section className="catalog" id="catalogo">
         <div className="catalog__inner">
           <div className="catalog__header">
             <span className="catalog__label">Favoritos</span>
@@ -32,10 +32,10 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Categories Tabs Section */}
-      <section className="catalog catalog--categories">
+      <section className="catalog catalog--categories" id="catalogo">
         <div className="catalog__inner">
           <div className="catalog__header">
             <span className="catalog__label">Categorías</span>

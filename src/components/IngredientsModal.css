@@ -90,6 +90,45 @@
   font-style: italic;
 }
 
+/* Tabs */
+.tabs-header {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-sm);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.tab-btn.active {
+  color: var(--color-cta);
+  background: var(--color-bg);
+  font-weight: 600;
+}
+
+.tab-content {
+  padding-top: var(--space-xs);
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .modal-overlay {

@@ -42,6 +42,44 @@
   opacity: 1;
 }
 
+/* Image Area */
+.product-card__image-wrapper {
+  position: relative;
+  width: calc(100% + (var(--space-lg) * 2));
+  margin-top: calc(var(--space-lg) * -1);
+  margin-left: calc(var(--space-lg) * -1);
+  margin-right: calc(var(--space-lg) * -1);
+  height: 220px;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-md);
+  transition: transform var(--transition-base);
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.05);
+}
+
+.product-card__tags--floating {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  z-index: 2;
+}
+
+.product-card__tags--floating .product-card__category,
+.product-card__tags--floating .product-card__stock-tag {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
 /* Icon Area */
 .product-card__icon-area {
   display: flex;
@@ -223,6 +261,34 @@
   box-shadow: none;
 }
 
+.product-card__ingredients-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 16px;          /* Mismo tamaño vertical que el botón añadir */
+  background: var(--color-bg); /* Fondo neutro de tu tarjeta */
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;         /* Evita que el texto se rompa en dos líneas */
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.product-card__ingredients-btn:hover {
+  background: var(--color-border-light);
+  color: var(--color-cta);
+  border-color: var(--color-cta);
+  transform: scale(1.03);      /* Mismo efecto de escalado sutil */
+}
+
+.product-card__ingredients-btn:active {
+  transform: scale(0.97);
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .product-card {
@@ -261,4 +327,114 @@
     padding: 8px 14px;
     font-size: 12px;
   }
+  .product-card__ingredients-btn span {
+    display: none; /* Esconde la palabra "Ingredientes" en móviles para mantener limpio el diseño y que solo quede el icono de Info */
+  }
+
+  .product-card__ingredients-btn {
+    padding: 8px 12px;         /* Proporcional al botón añadir en móvil */
+    font-size: 12px;
+  }
+}
+
+.product-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: nowrap; /* Fuerza a que se mantengan en la misma línea */
+}
+
+/* Image Lightbox */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  animation: lightbox-fade-in 250ms ease-out both;
+  cursor: zoom-out;
+}
+
+@keyframes lightbox-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-lightbox__img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: lightbox-scale-in 300ms var(--ease-out) both;
+  cursor: default;
+}
+
+@keyframes lightbox-scale-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.image-lightbox__close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.image-lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.product-card__skin-type {
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
+  margin: 0.25rem 0 0.5rem 0;
+  background: #f8f9fa;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.product-card__ingredients-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #f0f0f0;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product-card__ingredients-btn:hover {
+  background: #e0e0e0;
 }

@@ -1,4 +1,5 @@
 import { X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import type { Product } from '../data/products';
 import './IngredientsModal.css';
 
@@ -9,7 +10,18 @@ interface IngredientsModalProps {
 }
 
 export default function IngredientsModal({ isOpen, onClose, product }: IngredientsModalProps) {
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTab(0);
+    }
+  }, [isOpen, product]);
+
   if (!isOpen || !product) return null;
+
+  const hasVarieties = product.variedades_incluidas && product.variedades_incluidas.length > 0;
+  const hasIngredients = product.ingredientes_completos && product.ingredientes_completos.length > 0;
 
   return (
     <div className="modal-overlay" onClick={onClose} aria-hidden="true">
@@ -30,9 +42,32 @@ export default function IngredientsModal({ isOpen, onClose, product }: Ingredien
         <h3 className="modal-subtitle">{product.name}</h3>
 
         <div className="modal-body">
-          {product.ingredientes_completos && product.ingredientes_completos.length > 0 ? (
+          {hasVarieties ? (
+            <div className="ingredients-tabs">
+              <div className="tabs-header">
+                {product.variedades_incluidas!.map((varie, idx) => (
+                  <button
+                    key={idx}
+                    className={`tab-btn ${activeTab === idx ? 'active' : ''}`}
+                    onClick={() => setActiveTab(idx)}
+                  >
+                    {varie.tipo}
+                  </button>
+                ))}
+              </div>
+              <div className="tab-content">
+                <ul className="ingredients-list">
+                  {product.variedades_incluidas![activeTab].ingredientes_completos.map((ing, idx) => (
+                    <li key={idx} className="ingredient-item">
+                      {ing}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ) : hasIngredients ? (
             <ul className="ingredients-list">
-              {product.ingredientes_completos.map((ing, idx) => (
+              {product.ingredientes_completos!.map((ing, idx) => (
                 <li key={idx} className="ingredient-item">
                   {ing}
                 </li>
