@@ -19,7 +19,7 @@ export interface Product {
   caracteristicas_formula: string[];
   presentacion?: string;
   variedades_incluidas?: Variety[];
-  tipo_piel: string;          // ← NUEVA PROPIEDAD
+  tipo_piel: string; // ← NUEVA PROPIEDAD
 }
 
 export interface Category {
@@ -38,8 +38,8 @@ export const categories: Category[] = [
     products: [
       {
         id: 1,
-        name: "Vitamina C Facial Serum (15ML)",
-        image: "/images/products/1.jpg",
+        name: "Vitamina C Facial Serum - Global Beauty Care (15ML)",
+        image: "assets/img/vitamin-c-eye-roller.png",
         stock: 4,
         description:
           "Fórmula concentrada iluminadora que ayuda a unificar el tono de la piel y suavizar líneas finas.",
@@ -72,7 +72,7 @@ export const categories: Category[] = [
       {
         id: 2,
         name: "Sérum Facial de Retinol - Global Beauty Care (15ML)",
-        image: "/images/products/2.jpg",
+        image: "/assets/img/retinol-serum-under-eye-roller.png",
         stock: 4,
         description:
           "Fórmula concentrada antiedad que estimula la renovación celular y minimiza arrugas.",
@@ -133,7 +133,7 @@ export const categories: Category[] = [
       {
         id: 4,
         name: "Hidratante Calmante Libre de Aceites Anti-Imperfecciones - Global Beauty Care (50ML)",
-        image: "/images/products/4.jpg",
+        image: "/assets/img/blemish-control-oil-free-soothing-moisturizer.png",
         stock: 2,
         description:
           "Crema hidratante libre de aceites que calma rojeces gracias al aloe vera y pepino.",
@@ -161,7 +161,7 @@ export const categories: Category[] = [
       {
         id: 5,
         name: "Hidratante Potente con Retinol - Global Beauty Care (50ML)",
-        image: "/images/products/5.jpg",
+        image: "/assets/img/power-moisturizer.png",
         stock: 2,
         description:
           "Crema hidratante reconstructora con antioxidantes diseñada para atenuar arrugas de expresión.",
@@ -217,7 +217,7 @@ export const categories: Category[] = [
       {
         id: 7,
         name: "Sérum Potente Concentrado - Global Beauty Care (50ML)",
-        image: "/images/products/7.jpg",
+        image: "assets/img/power-serum.png",
         stock: 4,
         description:
           "Suero concentrado restaurador global que combate múltiples signos del envejecimiento.",
@@ -245,7 +245,8 @@ export const categories: Category[] = [
       {
         id: 8,
         name: "Glow Up de Ácido Hialurónico 2% + Fermento de Arroz Booster Nocturno (30ML)",
-        image: "/assets/img/glow-up-hyaluronic-acid-2-rice-ferment-night-booster.png",
+        image:
+          "/assets/img/glow-up-hyaluronic-acid-2-rice-ferment-night-booster.png",
         stock: 2,
         description:
           "Booster nocturno ultra-hidratante. El fermento de arroz ilumina y suaviza manchas cutáneas.",
@@ -272,7 +273,8 @@ export const categories: Category[] = [
       {
         id: 9,
         name: "Glow Up de Vitamina C + Fermento de Rosa Sérum Antioxidante (30ML)",
-        image: "/assets/img/glow-up-vitamin-c-rose-ferment-antioxidant-serum.png",
+        image:
+          "/assets/img/glow-up-vitamin-c-rose-ferment-antioxidant-serum.png",
         stock: 2,
         description:
           "Suero antioxidante que defiende la piel de los radicales libres aportando un acabado luminoso.",
@@ -459,7 +461,7 @@ export const categories: Category[] = [
       {
         id: 16,
         name: "Sérum de Colágeno Roller para Contorno de Ojos - Global Beauty Care (15ML)",
-        image: "/images/products/16.jpg",
+        image: "/assets/img/collagen-serum-under-eye-roller.png",
         stock: 1,
         description:
           "Aplicador roll-on metálico con efecto frío que drena bolsas e hidrata la zona ocular.",
@@ -486,7 +488,7 @@ export const categories: Category[] = [
       {
         id: 17,
         name: "Crema Gel de Tratamiento Anti-Imperfecciones - Global Beauty Care (15ML)",
-        image: "/images/products/17.jpg",
+        image: "assets/img/blemish-control-blemish-and-dark-spot-treatment.png",
         stock: 1,
         description:
           "Tratamiento localizado con Ácido salicílico al 2% que desatasca poros y mitiga brotes activos.",
@@ -512,7 +514,7 @@ export const categories: Category[] = [
       {
         id: 18,
         name: "Sérum Facial de Colágeno Suavizante y Tensor - Global Beauty Care (30ML)",
-        image: "/images/products/18.jpg",
+        image: "assets/img/smooth-and-lift-collagen-facial-serum.png",
         stock: 1,
         description:
           "Suero de efecto tensor y reafirmante que ayuda a restaurar niveles estructurales de colágeno.",
@@ -540,7 +542,7 @@ export const categories: Category[] = [
       {
         id: 19,
         name: "Crema de Colágeno Suavizante y Tensora - Global Beauty Care (50ML)",
-        image: "/images/products/19.jpg",
+        image: "assets/img/smooth-and-lift-collagen-skin-cream.png",
         stock: 1,
         description:
           "Crema facial reestructurante que sella la humedad formando una duradera capa protectora.",
@@ -588,7 +590,7 @@ export const categories: Category[] = [
           "Cada mascarilla está formulada para un beneficio específico",
           "Fórmulas refrescantes de rápida absorción",
         ],
-      variedades_incluidas: [
+        variedades_incluidas: [
           {
             tipo: "Rose Gel Face Mask (Calmante / Hidratante)",
             ingredientes_completos: [
@@ -598,7 +600,7 @@ export const categories: Category[] = [
               "Hialuronato de sodio",
               "Carbómero",
               "Fenoxietanol",
-              "Fragancia"
+              "Fragancia",
             ],
           },
           {
@@ -610,7 +612,7 @@ export const categories: Category[] = [
               "Oro coloidal",
               "Mica",
               "Fenoxietanol",
-              "Etilhexilglicerina"
+              "Etilhexilglicerina",
             ],
           },
           {
@@ -622,7 +624,7 @@ export const categories: Category[] = [
               "Jugo de hoja de Aloe Barbadensis",
               "Carbómero",
               "Fenoxietanol",
-              "Fragancia"
+              "Fragancia",
             ],
           },
         ],
@@ -694,7 +696,8 @@ export const categories: Category[] = [
         icon: "Flower",
         category: "Limpieza",
         price: 6,
-        tipo_piel: "Todos los tipos (variedad calmante, nutritiva, iluminadora)",
+        tipo_piel:
+          "Todos los tipos (variedad calmante, nutritiva, iluminadora)",
         presentacion:
           "Empaque con 3 mascarillas individuales de arcilla (Multi-Pack Botánico)",
         caracteristicas_formula: [
@@ -859,7 +862,7 @@ export const categories: Category[] = [
       {
         id: 27,
         name: "Mascarilla de Arcilla Efervescente - Global Beauty Care (74ML)",
-        image: "/images/products/27.jpg",
+        image: "assets/img/power-building-clay-mask.png",
         stock: 3,
         description:
           "Fórmula efervescente auto-espumosa con Arcilla Kaolin y Carbón para desintoxicar poros.",
@@ -970,7 +973,8 @@ export const categories: Category[] = [
       {
         id: 31,
         name: "Exfoliante Limpiador de Poros Anti-Imperfecciones - Global Beauty Care (74ML)",
-        image: "/images/products/31.jpg",
+        image:
+          "assets/img/exfoliante-limpiador-de-poros-anti-imperfecciones.png",
         stock: 1,
         description:
           "Exfoliante microfino con ácido salicílico para limpiar impurezas físicas y puntos negros acumulados.",
@@ -996,7 +1000,7 @@ export const categories: Category[] = [
       {
         id: 32,
         name: "Gel Limpiador Clarificante Libre de Aceites - Global Beauty Care (74ML)",
-        image: "/images/products/32.jpg",
+        image: "assets/img/gel-limpiador-clarificante-libre-de-aceites.png",
         stock: 1,
         description:
           "Gel limpiador espumoso clarificante que remueve impurezas y regula el sebo cutáneo.",
@@ -1047,7 +1051,6 @@ export const categories: Category[] = [
           "Nutre, calma e ilumina el tono de la piel instantáneamente",
         ],
       },
-      
     ],
   },
   {
@@ -1233,8 +1236,8 @@ export const categories: Category[] = [
 // BEST SELLERS (actualizados con tipo_piel)
 // ======================
 export const bestSellers: Product[] = [
-  { ...categories[0].products[0] },   // Vitamina C Facial Serum
-  { ...categories[0].products[4] },   // Hidratante Potente con Retinol
-  { ...categories[1].products[0] },   // Mascarilla Facial en Gel (3-Pack)
-  { ...categories[2].products[1] },   // Loción Corporal Hidratante de Ácido Hialurónico
+  { ...categories[0].products[0] }, // Vitamina C Facial Serum
+  { ...categories[0].products[4] }, // Hidratante Potente con Retinol
+  { ...categories[1].products[0] }, // Mascarilla Facial en Gel (3-Pack)
+  { ...categories[2].products[1] }, // Loción Corporal Hidratante de Ácido Hialurónico
 ];

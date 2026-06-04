@@ -112,7 +112,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           </span>
 
           <div className="product-card__actions">
-            {((product.ingredientes_completos &&
+            {/* {((product.ingredientes_completos &&
               product.ingredientes_completos.length > 0) ||
               (product.variedades_incluidas &&
                 product.variedades_incluidas.length > 0)) && (
@@ -126,7 +126,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                   strokeWidth={2}
                 />
               </button>
-            )}
+            )} */}
 
             <button
               className={`product-card__add-btn ${inCart ? "product-card__add-btn--active" : ""}`}
