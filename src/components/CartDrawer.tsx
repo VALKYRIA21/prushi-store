@@ -38,31 +38,31 @@ export default function CartDrawer() {
       return;
     }
 
-    const baseNumber = ""; // Número con código de país
+    const baseNumber = "584149010651"; // Número con código de país
 
-    const paymentDetails: Record<string, string> = {
-      'Pago Móvil': 'Banco Mercantil, 0416-8279049, V-12345678',
-      'Efectivo': 'Acordar entrega para pago en efectivo',
-      'PayPal': 'pagos@prushistore.com',
-      'Zelle': 'zelle@prushistore.com (Prushi Store LLC)',
-      'Binance': 'ID: 123456789 o pagos@prushistore.com',
-      'Zinli': 'pagos@prushistore.com',
-      'Wally': '0416-8279049'
-    };
+    // const paymentDetails: Record<string, string> = {
+    //   'Pago Móvil': '',
+    //   'Efectivo': '',
+    //   'PayPal': '',
+    //   'Zelle': '',
+    //   'Binance': '',
+    //   'Zinli': '',
+    //   'Wally': ''
+    // };
 
     const itemsText = cart
       .map(item => `- ${item.name} (x${item.quantity})`)
       .join('%0A');
 
     const paymentLabel = userData.paymentMethod || 'No especificado';
-    const accountDetails = userData.paymentMethod ? `%0A*Datos de pago:* ${paymentDetails[userData.paymentMethod]}` : '';
+    // const accountDetails = userData.paymentMethod ? `%0A*Datos de pago:* ${paymentDetails[userData.paymentMethod]}` : '';
     const giftText = userData.isGift === 'Sí' ? '%0A*¿Es regalo?:* Sí 🎁' : '';
     const noteText = userData.note.trim() ? `%0A*Nota:* ${userData.note}` : '';
 
     const message = `*Pedido de Skincare — Prushi Store*%0A%0A` +
       `*Nombre:* ${userData.name}%0A` +
       `*Ubicación:* ${userData.address}%0A` +
-      `*Método de pago:* ${paymentLabel}${accountDetails}${giftText}%0A%0A` +
+      `*Método de pago:* ${paymentLabel}${giftText}%0A%0A` +
       `*Productos:*%0A${itemsText}%0A%0A` +
       noteText;
 
