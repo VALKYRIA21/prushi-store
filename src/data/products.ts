@@ -106,7 +106,7 @@ export const categories: Category[] = [
       {
         id: 3,
         name: "Sérum Facial de Retinol Concentrado - Global Beauty Care (10 Cápsulas)",
-        image: "/src/assets/img/facial-serum-retinol.png",
+        image: "/assets/img/facial-serum-retinol.png",
         stock: 4,
         description:
           "Cápsulas monodosis herméticas que conservan la potencia del retinol puro sin oxidación.",
@@ -189,7 +189,7 @@ export const categories: Category[] = [
       {
         id: 6,
         name: "Sérum Doble Renovador de Retinol - Global Beauty Care (50ML)",
-        image: "/src/assets/img/retinol-renewing-double-serum.png",
+        image: "/assets/img/retinol-renewing-double-serum.png",
         stock: 6,
         description:
           "Suero de doble acción texturizante que refina el tono y la textura irregular de la piel.",
@@ -245,7 +245,7 @@ export const categories: Category[] = [
       {
         id: 8,
         name: "Glow Up de Ácido Hialurónico 2% + Fermento de Arroz Booster Nocturno (30ML)",
-        image: "/src/assets/img/glow-up-hyaluronic-acid-2-rice-ferment-night-booster.png",
+        image: "/assets/img/glow-up-hyaluronic-acid-2-rice-ferment-night-booster.png",
         stock: 2,
         description:
           "Booster nocturno ultra-hidratante. El fermento de arroz ilumina y suaviza manchas cutáneas.",
@@ -272,7 +272,7 @@ export const categories: Category[] = [
       {
         id: 9,
         name: "Glow Up de Vitamina C + Fermento de Rosa Sérum Antioxidante (30ML)",
-        image: "/src/assets/img/glow-up-vitamin-c-rose-ferment-antioxidant-serum.png",
+        image: "/assets/img/glow-up-vitamin-c-rose-ferment-antioxidant-serum.png",
         stock: 2,
         description:
           "Suero antioxidante que defiende la piel de los radicales libres aportando un acabado luminoso.",
@@ -299,7 +299,7 @@ export const categories: Category[] = [
       {
         id: 10,
         name: "Sérum Antiedad Multi-Péptidos (30ML)",
-        image: "/src/assets/img/multi-peptide-anti-aging-serum.png",
+        image: "/assets/img/multi-peptide-anti-aging-serum.png",
         stock: 1,
         description:
           "Complejo de péptidos dirigidos que estimula la síntesis de colágeno estructural y firmeza.",
@@ -326,7 +326,7 @@ export const categories: Category[] = [
       {
         id: 11,
         name: "Sérum Vitalidad con Espinaca y Ácido Hialurónico - Super Greens (30ML)",
-        image: "/src/assets/img/super-greens-vitality-serum.png",
+        image: "/assets/img/super-greens-vitality-serum.png",
         stock: 2,
         description:
           "Inyección de vitaminas y vitalidad para pieles estresadas con base de ácido hialurónico puro.",
@@ -352,7 +352,7 @@ export const categories: Category[] = [
       {
         id: 12,
         name: "Sérum con Extracto de Sandía y Niacinamida - Glow Up (30ML)",
-        image: "/src/assets/img/glow-up-serum-watermelon.png",
+        image: "/assets/img/glow-up-serum-watermelon.png",
         stock: 3,
         description:
           'Suero hidratante de acabado húmedo ("Dewy") que minimiza la apariencia de poros abiertos.',
@@ -379,7 +379,7 @@ export const categories: Category[] = [
       {
         id: 13,
         name: "Sérum Revitalizante con Extracto de Granada y Péptidos - Glow Up (30ML)",
-        image: "/src/assets/img/glow-up-revitalizing-serum-pomegranate.png",
+        image: "/assets/img/glow-up-revitalizing-serum-pomegranate.png",
         stock: 2,
         description:
           "Suero revitalizante y energético que actúa como un potente escudo antioxidante facial.",
@@ -405,7 +405,7 @@ export const categories: Category[] = [
       {
         id: 14,
         name: "Sérum Renovador con Extracto de Aguacate y Ceramidas - Glow Up (30ML)",
-        image: "/src/assets/img/glow-up-renewing-serum-avocado.png",
+        image: "/assets/img/glow-up-renewing-serum-avocado.png",
         stock: 2,
         description:
           "Suero reparador de la barrera cutánea que nutre intensamente las zonas resecas de la piel.",
@@ -432,7 +432,7 @@ export const categories: Category[] = [
       {
         id: 15,
         name: "Crema Iluminadora de Ojos con Col Rizada y Vitamina C - Super Greens (15ML)",
-        image: "/src/assets/img/super-greens-brightening-eye-cream.png",
+        image: "/assets/img/super-greens-brightening-eye-cream.png",
         stock: 1,
         description:
           "Crema de contorno de ojos iluminadora que desvanece efectivamente la apariencia de ojeras oscuras.",
@@ -573,7 +573,7 @@ export const categories: Category[] = [
       {
         id: 20,
         name: "Mascarilla Facial en Gel - Global Beauty Care (3-Pack)",
-        image: "/src/assets/img/gel-mask.png",
+        image: "assets/img/gel-mask.png",
         stock: 3,
         description:
           "Tratamiento facial triple en gel con efectos iluminadores, purificantes y tensores.",
@@ -630,7 +630,7 @@ export const categories: Category[] = [
       {
         id: 21,
         name: "Mascarilla Facial de Arcilla - Global Beauty Care (3-Pack)",
-        image: "/src/assets/img/clay-face-mask-1.png",
+        image: "/assets/img/clay-face-mask-1.png",
         stock: 4,
         description:
           "Set de limpieza profunda tradicional multizona (Contiene pepino, sal rosa, minerales y aguacate).",
@@ -687,7 +687,7 @@ export const categories: Category[] = [
       {
         id: 22,
         name: "Mascarilla Facial de Arcilla Botánica - Global Beauty Care (3-Pack)",
-        image: "/src/assets/img/clay-face-mask-2.png",
+        image: "/assets/img/clay-face-mask-2.png",
         stock: 4,
         description:
           "Set de mascarillas de arcilla con extractos botánicos de cúrcuma, miel, coco y manzanilla.",
@@ -748,7 +748,7 @@ export const categories: Category[] = [
       {
         id: 23,
         name: "Mascarilla de Arcilla de Higo - Global Beauty Care (1-Pack, 35G)",
-        image: "/src/assets/img/clay-face-mask-fig.png",
+        image: "/assets/img/clay-face-mask-fig.png",
         stock: 8,
         description:
           "Mascarilla individual de arcilla enriquecida con propiedades antioxidantes y suavizantes del higo.",
@@ -776,7 +776,7 @@ export const categories: Category[] = [
       {
         id: 24,
         name: "Mascarilla de Arcilla de Miel - Global Beauty Care (1-Pack, 35G)",
-        image: "/src/assets/img/clay-face-mask-honey.png",
+        image: "/assets/img/clay-face-mask-honey.png",
         stock: 6,
         description:
           "Mascarilla de arcilla nutritiva que combina la limpieza con la alta hidratación de la miel pura.",
@@ -805,7 +805,7 @@ export const categories: Category[] = [
       {
         id: 25,
         name: "Mascarilla Peel Off de Calabaza - Global Beauty Care (1-Pack, 35G)",
-        image: "/src/assets/img/peel-off-face-mask-pumpkin.png",
+        image: "/assets/img/peel-off-face-mask-pumpkin.png",
         stock: 6,
         description:
           "Mascarilla exfoliante peel-off con enzimas de calabaza que remueven impurezas superficiales.",
@@ -832,7 +832,7 @@ export const categories: Category[] = [
       {
         id: 26,
         name: "Mascarilla Peel Off de Extracto de Black Sugar - Global Beauty Care (1-Pack, 35G)",
-        image: "/src/assets/img/peel-off-face-mask-black-sugar-extract.png",
+        image: "/assets/img/peel-off-face-mask-black-sugar-extract.png",
         stock: 8,
         description:
           "Mascarilla peel-off purificante con extracto de azúcar negro para eliminar puntos negros.",
@@ -888,7 +888,7 @@ export const categories: Category[] = [
       {
         id: 28,
         name: "Mascarilla de Esencia de Retinol - Global Beauty Care (1-Pack)",
-        image: "/src/assets/img/retinol-essence-mask.png",
+        image: "/assets/img/retinol-essence-mask.png",
         stock: 2,
         description:
           "Mascarilla de tejido (Sheet Mask) saturada en esencia de retinol para un shot intensivo antiedad.",
@@ -917,7 +917,7 @@ export const categories: Category[] = [
       {
         id: 29,
         name: "Mascarilla Sérum Revitalizante Tea Tree Power + Cafeína + B5 (30ML)",
-        image: "/src/assets/img/tea-tree-power-caffeine-b5-revive-serum-mask.png",
+        image: "/assets/img/tea-tree-power-caffeine-b5-revive-serum-mask.png",
         stock: 4,
         description:
           "Suero en mascarilla descongestionante. Controla imperfecciones y regula el exceso de brillo.",
@@ -943,7 +943,7 @@ export const categories: Category[] = [
       {
         id: 30,
         name: "Limpiador Espumoso Enzimático con Agua de Arroz (74ML)",
-        image: "/src/assets/img/rice-water-foaming-enzyme-cleanser.png",
+        image: "/assets/img/rice-water-foaming-enzyme-cleanser.png",
         stock: 2,
         description:
           "Limpiador facial espumoso con papaína que realiza una microexfoliación diaria muy suave.",
@@ -1022,7 +1022,7 @@ export const categories: Category[] = [
       {
         id: 33,
         name: "Tónico Lechoso con Agua de Arroz (118ML)",
-        image: "/src/assets/img/rice-water-milky-toner.png",
+        image: "/assets/img/rice-water-milky-toner.png",
         stock: 1,
         description:
           "Tónico de textura lechosa inspirado en K-Beauty que calma, nutre e ilumina el tono cutáneo.",
@@ -1057,7 +1057,7 @@ export const categories: Category[] = [
       {
         id: 34,
         name: "Loción Corporal Revitalizante de Colágeno - Global Beauty Care (296 ML)",
-        image: "/src/assets/img/collagen-body-lotion.png",
+        image: "/assets/img/collagen-body-lotion.png",
         stock: 2,
         description:
           "Loción corporal reafirmante con colágeno y manteca de karité para mejorar la elasticidad.",
@@ -1088,7 +1088,7 @@ export const categories: Category[] = [
       {
         id: 35,
         name: "Loción Corporal Hidratante de Ácido Hialurónico - Global Beauty Care (296ML)",
-        image: "/src/assets/img/hyaluronic-body-lotion.png",
+        image: "/assets/img/hyaluronic-body-lotion.png",
         stock: 2,
         description:
           "Loción corporal de hidratación intensa que retiene la humedad natural cutánea de forma prolongada.",
@@ -1119,7 +1119,7 @@ export const categories: Category[] = [
       {
         id: 36,
         name: "Loción Corporal Iluminadora de Vitamina C - Global Beauty Care (296ML)",
-        image: "/src/assets/img/vitamin-c-body-lotion.png",
+        image: "/assets/img/vitamin-c-body-lotion.png",
         stock: 2,
         description:
           "Loción corporal iluminadora con Vitamina C y Niacinamida para unificar el tono del cuerpo.",
@@ -1150,7 +1150,7 @@ export const categories: Category[] = [
       {
         id: 37,
         name: "Aceite Iluminador de Vitamina C para Rostro y Cuerpo Glow - Spa Scentials (95ML)",
-        image: "/src/assets/img/glow-vitamin-c.png",
+        image: "/assets/img/glow-vitamin-c.png",
         stock: 3,
         description:
           "Aceite ligero multiusos que aporta un resplandor instantáneo sin sensación grasosa.",
@@ -1174,7 +1174,7 @@ export const categories: Category[] = [
       {
         id: 38,
         name: "Aceite Corporal Reparador de Retinol - Global Beauty Care (95ML)",
-        image: "/src/assets/img/smooth-retinol-repair-face-body-oil.png",
+        image: "/assets/img/smooth-retinol-repair-face-body-oil.png",
         stock: 3,
         description:
           "Aceite emoliente de noche diseñado para suavizar y promover la renovación de la textura de la piel.",
@@ -1200,7 +1200,7 @@ export const categories: Category[] = [
       {
         id: 39,
         name: "Exfoliante Corporal de Ácido Hialurónico con Sal Marina y Pepino (170GR)",
-        image: "/src/assets/img/hyaluronic-acid-exfoliating-body-scrub.png",
+        image: "/assets/img/hyaluronic-acid-exfoliating-body-scrub.png",
         stock: 2,
         description:
           "Exfoliante mecánico con sal marina y pepino que remueve células muertas hidratando con ácido hialurónico.",
