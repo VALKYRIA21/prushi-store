@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plus, X } from "lucide-react";
+import { X } from "lucide-react";
 import * as Icons from "lucide-react";
 import { useCart } from "../context/CartContext";
 import type { Product } from "../context/CartContext";
@@ -12,10 +12,10 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, index }: ProductCardProps) {
-  const { addToCart, cart } = useCart();
+  //const { addToCart, cart } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);
-  const inCart = cart.find((item) => item.id === product.id);
+  //const inCart = cart.find((item) => item.id === product.id);
 
   const IconComponent =
     (
@@ -25,12 +25,12 @@ export default function ProductCard({ product, index }: ProductCardProps) {
       >
     )[product.icon] || Icons.Package;
 
-  const handleAdd = () => {
-    addToCart(product);
-  };
+  // const handleAdd = () => {
+  //   addToCart(product);
+  // };
 
   const isOutOfStock = product.stock === 0;
-  const isLimitReached = inCart && inCart.quantity >= product.stock;
+  //const isLimitReached = inCart && inCart.quantity >= product.stock;
 
   return (
     <>
@@ -105,11 +105,11 @@ export default function ProductCard({ product, index }: ProductCardProps) {
 
         <div className="product-card__footer">
           {/* --- PRECIO DINÁMICO --- */}
-          <span className="product-card__price">
+          {/* <span className="product-card__price">
             {product.price && product.price > 0
               ? `$${product.price}`
               : "Consultar"}
-          </span>
+          </span> */}
 
           <div className="product-card__actions">
             {/* {((product.ingredientes_completos &&
@@ -128,7 +128,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
               </button>
             )} */}
 
-            <button
+            {/* <button
               className={`product-card__add-btn ${inCart ? "product-card__add-btn--active" : ""}`}
               onClick={handleAdd}
               disabled={isOutOfStock || isLimitReached}
@@ -148,7 +148,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                       : `En carrito (${inCart.quantity})`
                     : "Añadir"}
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
       </article>
