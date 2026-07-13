@@ -61,11 +61,40 @@
   height: 100%;
   object-fit: contain;
   padding: var(--space-md);
-  transition: transform var(--transition-base);
+  opacity: 0;
+  transition:
+    opacity 350ms ease,
+    transform var(--transition-base);
 }
 
-.product-card:hover .product-card__image {
+.product-card__image--loaded {
+  opacity: 1;
+}
+
+.product-card:hover .product-card__image--loaded {
   transform: scale(1.05);
+}
+
+.product-card__image-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-border-light) 0%,
+    var(--color-bg) 40%,
+    var(--color-border-light) 80%
+  );
+  background-size: 200% 100%;
+  animation: image-skeleton-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes image-skeleton-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .product-card__tags--floating {

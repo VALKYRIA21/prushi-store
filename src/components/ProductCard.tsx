@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Plus } from "lucide-react";
 import * as Icons from "lucide-react";
 import { useCart } from "../context/CartContext";
@@ -11,11 +11,26 @@ interface ProductCardProps {
   index: number;
 }
 
+function normalizeImageSrc(src: string) {
+  return src.startsWith("/") || src.startsWith("http") ? src : `/${src}`;
+}
+
 export default function ProductCard({ product, index }: ProductCardProps) {
   const { addToCart, cart } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
   const inCart = cart.find((item) => item.id === product.id);
+  const imageSrc = product.image ? normalizeImageSrc(product.image) : "";
+
+  useEffect(() => {
+    setImageLoaded(false);
+    const img = imgRef.current;
+    if (img?.complete && img.naturalWidth > 0) {
+      setImageLoaded(true);
+    }
+  }, [imageSrc]);
 
   const IconComponent =
     (
@@ -47,11 +62,21 @@ export default function ProductCard({ product, index }: ProductCardProps) {
             tabIndex={0}
             aria-label={`Ver imagen de ${product.name}`}
           >
+            {!imageLoaded && (
+              <div
+                className="product-card__image-skeleton"
+                aria-hidden="true"
+              />
+            )}
             <img
-              src={product.image}
+              ref={imgRef}
+              src={imageSrc}
               alt={product.name}
-              className="product-card__image"
-              loading="lazy"
+              className={`product-card__image ${imageLoaded ? "product-card__image--loaded" : ""}`}
+              loading={index < 6 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={index < 3 ? "high" : "auto"}
+              onLoad={() => setImageLoaded(true)}
             />
 
             <div className="product-card__tags product-card__tags--floating">
@@ -158,7 +183,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
         product={product}
       />
 
-      {isImageOpen && product.image && (
+      {isImageOpen && imageSrc && (
         <div
           className="image-lightbox"
           onClick={() => setIsImageOpen(false)}
@@ -177,10 +202,11 @@ export default function ProductCard({ product, index }: ProductCardProps) {
             />
           </button>
           <img
-            src={product.image}
+            src={imageSrc}
             alt={product.name}
             className="image-lightbox__img"
             onClick={(e) => e.stopPropagation()}
+            decoding="async"
           />
         </div>
       )}
