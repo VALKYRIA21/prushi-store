@@ -45,7 +45,7 @@ export const categories: Category[] = [
           "Fórmula concentrada iluminadora que ayuda a unificar el tono de la piel y suavizar líneas finas.",
         icon: "Sun",
         category: "Cuidado Facial",
-        price: 4.5,
+        price: 6,
         tipo_piel: "Todos los tipos de piel",
         ingredientes_completos: [
           "Agua",
@@ -78,7 +78,7 @@ export const categories: Category[] = [
           "Fórmula concentrada antiedad que estimula la renovación celular y minimiza arrugas.",
         icon: "Moon",
         category: "Cuidado Facial",
-        price: 4.5,
+        price: 5,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
           "Agua",
@@ -112,7 +112,7 @@ export const categories: Category[] = [
           "Cápsulas monodosis herméticas que conservan la potencia del retinol puro sin oxidación.",
         icon: "Eye",
         category: "Cuidado Facial",
-        price: 5.5,
+        price: 7,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
           "Ciclopentasiloxano",
@@ -139,7 +139,7 @@ export const categories: Category[] = [
           "Crema hidratante libre de aceites que calma rojeces gracias al aloe vera y pepino.",
         icon: "Sparkles",
         category: "Cuidado Facial",
-        price: 6,
+        price: 15,
         tipo_piel: "Piel grasa / con tendencia acneica",
         ingredientes_completos: [
           "Agua",
@@ -167,7 +167,7 @@ export const categories: Category[] = [
           "Crema hidratante reconstructora con antioxidantes diseñada para atenuar arrugas de expresión.",
         icon: "Droplets",
         category: "Cuidado Facial",
-        price: 7,
+        price: 15,
         tipo_piel: "Piel normal a seca / con signos de edad",
         ingredientes_completos: [
           "Agua",
@@ -195,7 +195,7 @@ export const categories: Category[] = [
           "Suero de doble acción texturizante que refina el tono y la textura irregular de la piel.",
         icon: "Layers",
         category: "Cuidado Facial",
-        price: 8,
+        price: 10,
         tipo_piel: "Piel mixta / con textura irregular",
         ingredientes_completos: [
           "Agua",
@@ -223,7 +223,7 @@ export const categories: Category[] = [
           "Suero concentrado restaurador global que combate múltiples signos del envejecimiento.",
         icon: "Zap",
         category: "Cuidado Facial",
-        price: 6,
+        price: 15,
         tipo_piel: "Piel madura / deshidratada",
         ingredientes_completos: [
           "Agua",
@@ -252,7 +252,7 @@ export const categories: Category[] = [
           "Booster nocturno ultra-hidratante. El fermento de arroz ilumina y suaviza manchas cutáneas.",
         icon: "Moon",
         category: "Cuidado Facial",
-        price: 5,
+        price: 8,
         tipo_piel: "Todos los tipos de piel, especialmente seca o deshidratada",
         ingredientes_completos: [
           "Agua",
@@ -280,7 +280,7 @@ export const categories: Category[] = [
           "Suero antioxidante que defiende la piel de los radicales libres aportando un acabado luminoso.",
         icon: "Sun",
         category: "Cuidado Facial",
-        price: 5,
+        price: 8,
         tipo_piel: "Todos los tipos de piel",
         ingredientes_completos: [
           "Agua",
@@ -307,7 +307,7 @@ export const categories: Category[] = [
           "Complejo de péptidos dirigidos que estimula la síntesis de colágeno estructural y firmeza.",
         icon: "Sparkles",
         category: "Cuidado Facial",
-        price: 5,
+        price: 8,
         tipo_piel: "Piel madura / con pérdida de firmeza",
         ingredientes_completos: [
           "Agua",
@@ -334,7 +334,7 @@ export const categories: Category[] = [
           "Inyección de vitaminas y vitalidad para pieles estresadas con base de ácido hialurónico puro.",
         icon: "Leaf",
         category: "Cuidado Facial",
-        price: 6,
+        price: 8,
         tipo_piel: "Piel fatigada / estresada",
         ingredientes_completos: [
           "Agua",
@@ -360,7 +360,7 @@ export const categories: Category[] = [
           'Suero hidratante de acabado húmedo ("Dewy") que minimiza la apariencia de poros abiertos.',
         icon: "Heart",
         category: "Cuidado Facial",
-        price: 5,
+        price: 8,
         tipo_piel: "Piel mixta / grasa con poros dilatados",
         ingredientes_completos: [
           "Agua",
@@ -387,7 +387,7 @@ export const categories: Category[] = [
           "Suero revitalizante y energético que actúa como un potente escudo antioxidante facial.",
         icon: "Flame",
         category: "Cuidado Facial",
-        price: 4,
+        price: 8,
         tipo_piel: "Piel opaca / sin luminosidad",
         ingredientes_completos: [
           "Agua",
@@ -413,7 +413,7 @@ export const categories: Category[] = [
           "Suero reparador de la barrera cutánea que nutre intensamente las zonas resecas de la piel.",
         icon: "ShieldAlert",
         category: "Cuidado Facial",
-        price: 4,
+        price: 8,
         tipo_piel: "Piel seca / desprotegida / con barrera dañada",
         ingredientes_completos: [
           "Agua",
@@ -440,7 +440,7 @@ export const categories: Category[] = [
           "Crema de contorno de ojos iluminadora que desvanece efectivamente la apariencia de ojeras oscuras.",
         icon: "Eye",
         category: "Cuidado Facial",
-        price: 5,
+        price: 10,
         tipo_piel: "Contorno de ojos (todos los tipos)",
         ingredientes_completos: [
           "Agua",
@@ -467,7 +467,7 @@ export const categories: Category[] = [
           "Aplicador roll-on metálico con efecto frío que drena bolsas e hidrata la zona ocular.",
         icon: "RotateCw",
         category: "Cuidado Facial",
-        price: 4.5,
+        price: 6,
         tipo_piel: "Contorno de ojos (todos, especialmente con bolsas)",
         ingredientes_completos: [
           "Agua",
@@ -494,7 +494,7 @@ export const categories: Category[] = [
           "Tratamiento localizado con Ácido salicílico al 2% que desatasca poros y mitiga brotes activos.",
         icon: "Activity",
         category: "Cuidado Facial",
-        price: 8,
+        price: 12,
         tipo_piel: "Piel grasa / acneica (uso localizado)",
         ingredientes_completos: [
           "Agua",
@@ -520,7 +520,7 @@ export const categories: Category[] = [
           "Suero de efecto tensor y reafirmante que ayuda a restaurar niveles estructurales de colágeno.",
         icon: "TrendingUp",
         category: "Cuidado Facial",
-        price: 6,
+        price: 10,
         tipo_piel: "Piel madura / flácida",
         ingredientes_completos: [
           "Agua",
@@ -548,7 +548,7 @@ export const categories: Category[] = [
           "Crema facial reestructurante que sella la humedad formando una duradera capa protectora.",
         icon: "Smile",
         category: "Cuidado Facial",
-        price: 7,
+        price: 15,
         tipo_piel: "Piel seca / madura",
         ingredientes_completos: [
           "Agua",
@@ -581,7 +581,7 @@ export const categories: Category[] = [
           "Tratamiento facial triple en gel con efectos iluminadores, purificantes y tensores.",
         icon: "Layers",
         category: "Limpieza",
-        price: 6,
+        price: 5,
         tipo_piel: "Todos los tipos de piel",
         presentacion:
           "Empaque con 3 mascarillas individuales de gel (Multi-Pack)",
@@ -638,7 +638,7 @@ export const categories: Category[] = [
           "Set de limpieza profunda tradicional multizona (Contiene pepino, sal rosa, minerales y aguacate).",
         icon: "Grid",
         category: "Limpieza",
-        price: 6,
+        price: 5,
         tipo_piel: "Piel grasa / mixta, también normal",
         presentacion:
           "Empaque con 3 mascarillas individuales de arcilla (Multi-Pack Tradicional)",
@@ -695,7 +695,7 @@ export const categories: Category[] = [
           "Set de mascarillas de arcilla con extractos botánicos de cúrcuma, miel, coco y manzanilla.",
         icon: "Flower",
         category: "Limpieza",
-        price: 6,
+        price: 5,
         tipo_piel:
           "Todos los tipos (variedad calmante, nutritiva, iluminadora)",
         presentacion:
@@ -868,7 +868,7 @@ export const categories: Category[] = [
           "Fórmula efervescente auto-espumosa con Arcilla Kaolin y Carbón para desintoxicar poros.",
         icon: "Wind",
         category: "Limpieza",
-        price: 5,
+        price: 12,
         tipo_piel: "Piel grasa / con poros obstruidos",
         ingredientes_completos: [
           "Agua",
@@ -897,7 +897,7 @@ export const categories: Category[] = [
           "Mascarilla de tejido (Sheet Mask) saturada en esencia de retinol para un shot intensivo antiedad.",
         icon: "FileText",
         category: "Limpieza",
-        price: 3,
+        price: 2,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
           "Agua",
@@ -926,7 +926,7 @@ export const categories: Category[] = [
           "Suero en mascarilla descongestionante. Controla imperfecciones y regula el exceso de brillo.",
         icon: "Coffee",
         category: "Limpieza",
-        price: 5,
+        price: 8,
         tipo_piel: "Piel grasa / acneica",
         ingredientes_completos: [
           "Agua",
@@ -952,7 +952,7 @@ export const categories: Category[] = [
           "Limpiador facial espumoso con papaína que realiza una microexfoliación diaria muy suave.",
         icon: "Sparkles",
         category: "Limpieza",
-        price: 5,
+        price: 12,
         tipo_piel: "Todos los tipos de piel (especialmente sensible)",
         ingredientes_completos: [
           "Agua",
@@ -980,7 +980,7 @@ export const categories: Category[] = [
           "Exfoliante microfino con ácido salicílico para limpiar impurezas físicas y puntos negros acumulados.",
         icon: "Scissors",
         category: "Limpieza",
-        price: 6,
+        price:12,
         tipo_piel: "Piel grasa / con puntos negros",
         ingredientes_completos: [
           "Agua",
@@ -1006,7 +1006,7 @@ export const categories: Category[] = [
           "Gel limpiador espumoso clarificante que remueve impurezas y regula el sebo cutáneo.",
         icon: "Waves",
         category: "Limpieza",
-        price: 6,
+        price: 12,
         tipo_piel: "Piel grasa / mixta",
         ingredientes_completos: [
           "Agua",
@@ -1032,7 +1032,7 @@ export const categories: Category[] = [
           "Tónico de textura lechosa inspirado en K-Beauty que calma, nutre e ilumina el tono cutáneo.",
         icon: "Droplets",
         category: "Limpieza",
-        price: 5,
+        price: 7,
         tipo_piel: "Piel seca / sensible / deshidratada",
         ingredientes_completos: [
           "Agua",
@@ -1066,7 +1066,7 @@ export const categories: Category[] = [
           "Loción corporal reafirmante con colágeno y manteca de karité para mejorar la elasticidad.",
         icon: "Sparkles",
         category: "Cuidado Corporal",
-        price: 5,
+        price: 8,
         tipo_piel: "Piel seca / deshidratada (todo el cuerpo)",
         ingredientes_completos: [
           "Agua",
@@ -1097,7 +1097,7 @@ export const categories: Category[] = [
           "Loción corporal de hidratación intensa que retiene la humedad natural cutánea de forma prolongada.",
         icon: "Droplets",
         category: "Cuidado Corporal",
-        price: 5,
+        price: 8,
         tipo_piel: "Todos los tipos de piel (especialmente seca)",
         ingredientes_completos: [
           "Agua",
@@ -1128,7 +1128,7 @@ export const categories: Category[] = [
           "Loción corporal iluminadora con Vitamina C y Niacinamida para unificar el tono del cuerpo.",
         icon: "Sun",
         category: "Cuidado Corporal",
-        price: 5,
+        price: 8,
         tipo_piel: "Todos los tipos (para unificar el tono corporal)",
         ingredientes_completos: [
           "Agua",
@@ -1159,7 +1159,7 @@ export const categories: Category[] = [
           "Aceite ligero multiusos que aporta un resplandor instantáneo sin sensación grasosa.",
         icon: "Zap",
         category: "Cuidado Corporal",
-        price: 5,
+        price: 8,
         tipo_piel: "Todos los tipos (rostro y cuerpo)",
         ingredientes_completos: [
           "Aceite de Glycine Soja (Soja)",
@@ -1183,7 +1183,7 @@ export const categories: Category[] = [
           "Aceite emoliente de noche diseñado para suavizar y promover la renovación de la textura de la piel.",
         icon: "Moon",
         category: "Cuidado Corporal",
-        price: 5,
+        price: 8,
         tipo_piel: "Piel madura / con textura irregular",
         ingredientes_completos: [
           "Aceite de Glycine Soja (Soja)",
@@ -1209,7 +1209,7 @@ export const categories: Category[] = [
           "Exfoliante mecánico con sal marina y pepino que remueve células muertas hidratando con ácido hialurónico.",
         icon: "Scissors",
         category: "Cuidado Corporal",
-        price: 5,
+        price: 8,
         tipo_piel: "Todos los tipos (especialmente piel seca)",
         ingredientes_completos: [
           "Sal marina",
