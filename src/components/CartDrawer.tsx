@@ -38,7 +38,7 @@ export default function CartDrawer() {
       return;
     }
 
-    const baseNumber = "584149010651"; // Número con código de país
+    const baseNumber = "584168279049"; // Número con código de país
 
     // const paymentDetails: Record<string, string> = {
     //   'Pago Móvil': '',

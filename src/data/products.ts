@@ -566,12 +566,6 @@ export const categories: Category[] = [
           "Efecto lifting y suavizante continuo",
         ],
       },
-    ],
-  },
-  {
-    name: "Limpieza",
-    icon: "Waves",
-    products: [
       {
         id: 20,
         name: "Mascarilla Facial en Gel - Global Beauty Care (3-Pack)",
@@ -580,7 +574,7 @@ export const categories: Category[] = [
         description:
           "Tratamiento facial triple en gel con efectos iluminadores, purificantes y tensores.",
         icon: "Layers",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 5,
         tipo_piel: "Todos los tipos de piel",
         presentacion:
@@ -637,7 +631,7 @@ export const categories: Category[] = [
         description:
           "Set de limpieza profunda tradicional multizona (Contiene pepino, sal rosa, minerales y aguacate).",
         icon: "Grid",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 5,
         tipo_piel: "Piel grasa / mixta, también normal",
         presentacion:
@@ -694,7 +688,7 @@ export const categories: Category[] = [
         description:
           "Set de mascarillas de arcilla con extractos botánicos de cúrcuma, miel, coco y manzanilla.",
         icon: "Flower",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 5,
         tipo_piel:
           "Todos los tipos (variedad calmante, nutritiva, iluminadora)",
@@ -756,7 +750,7 @@ export const categories: Category[] = [
         description:
           "Mascarilla individual de arcilla enriquecida con propiedades antioxidantes y suavizantes del higo.",
         icon: "Flame",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 3,
         tipo_piel: "Piel grasa / mixta",
         ingredientes_completos: [
@@ -784,7 +778,7 @@ export const categories: Category[] = [
         description:
           "Mascarilla de arcilla nutritiva que combina la limpieza con la alta hidratación de la miel pura.",
         icon: "Disc",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 3,
         tipo_piel: "Piel seca / normal",
         ingredientes_completos: [
@@ -813,7 +807,7 @@ export const categories: Category[] = [
         description:
           "Mascarilla exfoliante peel-off con enzimas de calabaza que remueven impurezas superficiales.",
         icon: "Smile",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 3,
         tipo_piel: "Piel normal a grasa",
         ingredientes_completos: [
@@ -840,7 +834,7 @@ export const categories: Category[] = [
         description:
           "Mascarilla peel-off purificante con extracto de azúcar negro para eliminar puntos negros.",
         icon: "RefreshCw",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 3,
         tipo_piel: "Piel grasa / con puntos negros",
         ingredientes_completos: [
@@ -867,7 +861,7 @@ export const categories: Category[] = [
         description:
           "Fórmula efervescente auto-espumosa con Arcilla Kaolin y Carbón para desintoxicar poros.",
         icon: "Wind",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 12,
         tipo_piel: "Piel grasa / con poros obstruidos",
         ingredientes_completos: [
@@ -896,7 +890,7 @@ export const categories: Category[] = [
         description:
           "Mascarilla de tejido (Sheet Mask) saturada en esencia de retinol para un shot intensivo antiedad.",
         icon: "FileText",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 2,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
@@ -925,7 +919,7 @@ export const categories: Category[] = [
         description:
           "Suero en mascarilla descongestionante. Controla imperfecciones y regula el exceso de brillo.",
         icon: "Coffee",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 8,
         tipo_piel: "Piel grasa / acneica",
         ingredientes_completos: [
@@ -951,7 +945,7 @@ export const categories: Category[] = [
         description:
           "Limpiador facial espumoso con papaína que realiza una microexfoliación diaria muy suave.",
         icon: "Sparkles",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 12,
         tipo_piel: "Todos los tipos de piel (especialmente sensible)",
         ingredientes_completos: [
@@ -979,7 +973,7 @@ export const categories: Category[] = [
         description:
           "Exfoliante microfino con ácido salicílico para limpiar impurezas físicas y puntos negros acumulados.",
         icon: "Scissors",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price:12,
         tipo_piel: "Piel grasa / con puntos negros",
         ingredientes_completos: [
@@ -1005,7 +999,7 @@ export const categories: Category[] = [
         description:
           "Gel limpiador espumoso clarificante que remueve impurezas y regula el sebo cutáneo.",
         icon: "Waves",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 12,
         tipo_piel: "Piel grasa / mixta",
         ingredientes_completos: [
@@ -1031,7 +1025,7 @@ export const categories: Category[] = [
         description:
           "Tónico de textura lechosa inspirado en K-Beauty que calma, nutre e ilumina el tono cutáneo.",
         icon: "Droplets",
-        category: "Limpieza",
+        category: "Cuidado Facial",
         price: 7,
         tipo_piel: "Piel seca / sensible / deshidratada",
         ingredientes_completos: [
