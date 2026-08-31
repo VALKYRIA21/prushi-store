@@ -1232,6 +1232,6 @@ export const categories: Category[] = [
 export const bestSellers: Product[] = [
   { ...categories[0].products[0] }, // Vitamina C Facial Serum
   { ...categories[0].products[4] }, // Hidratante Potente con Retinol
-  { ...categories[1].products[0] }, // Mascarilla Facial en Gel (3-Pack)
-  { ...categories[2].products[1] }, // Loción Corporal Hidratante de Ácido Hialurónico
+  { ...categories[0].products[19] }, // Mascarilla Facial en Gel (3-Pack)
+  { ...categories[1].products[1] }, // Loción Corporal Hidratante de Ácido Hialurónico
 ];
