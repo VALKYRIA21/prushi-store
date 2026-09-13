@@ -275,9 +275,6 @@ export default function CartDrawer() {
               <MessageCircle size={18} strokeWidth={2} />
               <span>Finalizar por WhatsApp</span>
             </button>
-            <p className="drawer__shipping-notice">
-              ✨ Los productos se envían  2 horas después de hacerse el pago.
-            </p>
             {!isFormValid && (
               <p className="drawer__form-hint">
                 Completa tu nombre y dirección para continuar

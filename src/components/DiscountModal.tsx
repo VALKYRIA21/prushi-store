@@ -54,10 +54,10 @@ export default function DiscountModal({ isOpen, onClose }: DiscountModalProps) {
         <p className="discount-modal__eyebrow">Oferta</p>
         <h2 id="discount-modal-title" className="discount-modal__title">
           Paga en divisas y ahorra
+          <span className="discount-modal__methods">
+           Al pagar en dólares (Efectivo, PayPal, Zelle, Binance, Zinli, Wally), Recibirás un descuento en tu compra✨.
+          </span>
         </h2>
-        <p className="discount-modal__text">
-          Al pagar en dólares obtienes un mejor precio frente a Pago Móvil.
-        </p>
 
         <button className="discount-modal__cta" onClick={onClose}>
           Ver catálogo
