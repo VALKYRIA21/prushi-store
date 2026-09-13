@@ -218,10 +218,22 @@
 }
 
 .product-card__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 4px;
   font-size: 22px;
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.product-card__price-bs {
+  font-size: 0.72em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: -0.2px;
 }
 
 .product-card__actions {

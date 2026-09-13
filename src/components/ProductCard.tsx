@@ -3,6 +3,8 @@ import { X, Plus } from "lucide-react";
 import * as Icons from "lucide-react";
 import { useCart } from "../context/CartContext";
 import type { Product } from "../context/CartContext";
+import { useBcvRate } from "../context/BcvRateContext";
+import { formatBolivares } from "../services/bcvRate";
 import IngredientsModal from "./IngredientsModal";
 import "./ProductCard.css";
 
@@ -17,12 +19,18 @@ function normalizeImageSrc(src: string) {
 
 export default function ProductCard({ product, index }: ProductCardProps) {
   const { addToCart, cart } = useCart();
+  const { rate } = useBcvRate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
   const inCart = cart.find((item) => item.id === product.id);
   const imageSrc = product.image ? normalizeImageSrc(product.image) : "";
+
+  const priceInBs =
+    rate && product.price_divisa_bolivar > 0
+      ? product.price_divisa_bolivar * rate.usd
+      : null;
 
   useEffect(() => {
     setImageLoaded(false);
@@ -130,9 +138,18 @@ export default function ProductCard({ product, index }: ProductCardProps) {
 
         <div className="product-card__footer">
           <span className="product-card__price">
-            {product.price && product.price > 0
-              ? `$${product.price}`
-              : "Consultar"}
+            {product.price && product.price > 0 ? (
+              <>
+                <span className="product-card__price-usd">${product.price}</span>
+                {priceInBs !== null && (
+                  <span className="product-card__price-bs">
+                    {" "}/ Bs {formatBolivares(priceInBs)}
+                  </span>
+                )}
+              </>
+            ) : (
+              "Consultar"
+            )}
           </span>
 
           <div className="product-card__actions">

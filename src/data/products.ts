@@ -15,6 +15,7 @@ export interface Product {
   icon: string;
   category: string;
   price: number;
+  price_divisa_bolivar: number;
   ingredientes_completos?: string[];
   caracteristicas_formula: string[];
   presentacion?: string;
@@ -40,12 +41,13 @@ export const categories: Category[] = [
         id: 1,
         name: "Vitamina C Facial Serum - Global Beauty Care (15ML)",
         image: "/assets/img/vitamin-c-eye-roller.webp",
-        stock: 4,
+        stock: 3,
         description:
           "Fórmula concentrada iluminadora que ayuda a unificar el tono de la piel y suavizar líneas finas.",
         icon: "Sun",
         category: "Cuidado Facial",
         price: 6,
+        price_divisa_bolivar: 7.5,
         tipo_piel: "Todos los tipos de piel",
         ingredientes_completos: [
           "Agua",
@@ -79,6 +81,7 @@ export const categories: Category[] = [
         icon: "Moon",
         category: "Cuidado Facial",
         price: 6,
+        price_divisa_bolivar: 7.5,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
           "Agua",
@@ -113,6 +116,7 @@ export const categories: Category[] = [
         icon: "Eye",
         category: "Cuidado Facial",
         price: 7,
+        price_divisa_bolivar: 8,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
           "Ciclopentasiloxano",
@@ -140,6 +144,7 @@ export const categories: Category[] = [
         icon: "Sparkles",
         category: "Cuidado Facial",
         price: 15,
+        price_divisa_bolivar: 16,
         tipo_piel: "Piel grasa / con tendencia acneica",
         ingredientes_completos: [
           "Agua",
@@ -168,6 +173,7 @@ export const categories: Category[] = [
         icon: "Droplets",
         category: "Cuidado Facial",
         price: 15,
+        price_divisa_bolivar: 16,
         tipo_piel: "Piel normal a seca / con signos de edad",
         ingredientes_completos: [
           "Agua",
@@ -190,12 +196,13 @@ export const categories: Category[] = [
         id: 6,
         name: "Sérum Doble Renovador de Retinol - Global Beauty Care (50ML)",
         image: "/assets/img/retinol-renewing-double-serum.webp",
-        stock: 6,
+        stock: 5,
         description:
           "Suero de doble acción texturizante que refina el tono y la textura irregular de la piel.",
         icon: "Layers",
         category: "Cuidado Facial",
         price: 10,
+        price_divisa_bolivar: 12,
         tipo_piel: "Piel mixta / con textura irregular",
         ingredientes_completos: [
           "Agua",
@@ -224,6 +231,7 @@ export const categories: Category[] = [
         icon: "Zap",
         category: "Cuidado Facial",
         price: 15,
+        price_divisa_bolivar: 16,
         tipo_piel: "Piel madura / deshidratada",
         ingredientes_completos: [
           "Agua",
@@ -253,6 +261,7 @@ export const categories: Category[] = [
         icon: "Moon",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Todos los tipos de piel, especialmente seca o deshidratada",
         ingredientes_completos: [
           "Agua",
@@ -281,6 +290,7 @@ export const categories: Category[] = [
         icon: "Sun",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Todos los tipos de piel",
         ingredientes_completos: [
           "Agua",
@@ -308,6 +318,7 @@ export const categories: Category[] = [
         icon: "Sparkles",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel madura / con pérdida de firmeza",
         ingredientes_completos: [
           "Agua",
@@ -335,6 +346,7 @@ export const categories: Category[] = [
         icon: "Leaf",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel fatigada / estresada",
         ingredientes_completos: [
           "Agua",
@@ -361,6 +373,7 @@ export const categories: Category[] = [
         icon: "Heart",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel mixta / grasa con poros dilatados",
         ingredientes_completos: [
           "Agua",
@@ -388,6 +401,7 @@ export const categories: Category[] = [
         icon: "Flame",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel opaca / sin luminosidad",
         ingredientes_completos: [
           "Agua",
@@ -414,6 +428,7 @@ export const categories: Category[] = [
         icon: "ShieldAlert",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel seca / desprotegida / con barrera dañada",
         ingredientes_completos: [
           "Agua",
@@ -441,6 +456,7 @@ export const categories: Category[] = [
         icon: "Eye",
         category: "Cuidado Facial",
         price: 10,
+        price_divisa_bolivar: 12,
         tipo_piel: "Contorno de ojos (todos los tipos)",
         ingredientes_completos: [
           "Agua",
@@ -468,6 +484,7 @@ export const categories: Category[] = [
         icon: "RotateCw",
         category: "Cuidado Facial",
         price: 6,
+        price_divisa_bolivar: 7.5,
         tipo_piel: "Contorno de ojos (todos, especialmente con bolsas)",
         ingredientes_completos: [
           "Agua",
@@ -495,6 +512,7 @@ export const categories: Category[] = [
         icon: "Activity",
         category: "Cuidado Facial",
         price: 12,
+        price_divisa_bolivar: 13,
         tipo_piel: "Piel grasa / acneica (uso localizado)",
         ingredientes_completos: [
           "Agua",
@@ -521,6 +539,7 @@ export const categories: Category[] = [
         icon: "TrendingUp",
         category: "Cuidado Facial",
         price: 10,
+        price_divisa_bolivar: 11,
         tipo_piel: "Piel madura / flácida",
         ingredientes_completos: [
           "Agua",
@@ -549,6 +568,7 @@ export const categories: Category[] = [
         icon: "Smile",
         category: "Cuidado Facial",
         price: 15,
+        price_divisa_bolivar: 16,
         tipo_piel: "Piel seca / madura",
         ingredientes_completos: [
           "Agua",
@@ -576,6 +596,7 @@ export const categories: Category[] = [
         icon: "Layers",
         category: "Cuidado Facial",
         price: 5,
+        price_divisa_bolivar: 6.5,
         tipo_piel: "Todos los tipos de piel",
         presentacion:
           "Empaque con 3 mascarillas individuales de gel (Multi-Pack)",
@@ -633,6 +654,7 @@ export const categories: Category[] = [
         icon: "Grid",
         category: "Cuidado Facial",
         price: 5,
+        price_divisa_bolivar: 6.5,
         tipo_piel: "Piel grasa / mixta, también normal",
         presentacion:
           "Empaque con 3 mascarillas individuales de arcilla (Multi-Pack Tradicional)",
@@ -690,6 +712,7 @@ export const categories: Category[] = [
         icon: "Flower",
         category: "Cuidado Facial",
         price: 5,
+        price_divisa_bolivar: 6.5,
         tipo_piel:
           "Todos los tipos (variedad calmante, nutritiva, iluminadora)",
         presentacion:
@@ -752,6 +775,7 @@ export const categories: Category[] = [
         icon: "Flame",
         category: "Cuidado Facial",
         price: 3,
+        price_divisa_bolivar: 4.5,
         tipo_piel: "Piel grasa / mixta",
         ingredientes_completos: [
           "Agua",
@@ -780,6 +804,7 @@ export const categories: Category[] = [
         icon: "Disc",
         category: "Cuidado Facial",
         price: 3,
+        price_divisa_bolivar: 4.5,
         tipo_piel: "Piel seca / normal",
         ingredientes_completos: [
           "Agua",
@@ -809,6 +834,7 @@ export const categories: Category[] = [
         icon: "Smile",
         category: "Cuidado Facial",
         price: 3,
+        price_divisa_bolivar: 4.5,
         tipo_piel: "Piel normal a grasa",
         ingredientes_completos: [
           "Agua",
@@ -836,6 +862,7 @@ export const categories: Category[] = [
         icon: "RefreshCw",
         category: "Cuidado Facial",
         price: 3,
+        price_divisa_bolivar: 4.5,
         tipo_piel: "Piel grasa / con puntos negros",
         ingredientes_completos: [
           "Agua",
@@ -863,6 +890,7 @@ export const categories: Category[] = [
         icon: "Wind",
         category: "Cuidado Facial",
         price: 12,
+        price_divisa_bolivar: 13.5,
         tipo_piel: "Piel grasa / con poros obstruidos",
         ingredientes_completos: [
           "Agua",
@@ -892,6 +920,7 @@ export const categories: Category[] = [
         icon: "FileText",
         category: "Cuidado Facial",
         price: 2,
+        price_divisa_bolivar: 3,
         tipo_piel: "Piel madura / con arrugas",
         ingredientes_completos: [
           "Agua",
@@ -921,6 +950,7 @@ export const categories: Category[] = [
         icon: "Coffee",
         category: "Cuidado Facial",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel grasa / acneica",
         ingredientes_completos: [
           "Agua",
@@ -947,6 +977,7 @@ export const categories: Category[] = [
         icon: "Sparkles",
         category: "Cuidado Facial",
         price: 12,
+        price_divisa_bolivar: 13,
         tipo_piel: "Todos los tipos de piel (especialmente sensible)",
         ingredientes_completos: [
           "Agua",
@@ -975,6 +1006,7 @@ export const categories: Category[] = [
         icon: "Scissors",
         category: "Cuidado Facial",
         price:12,
+        price_divisa_bolivar: 13,
         tipo_piel: "Piel grasa / con puntos negros",
         ingredientes_completos: [
           "Agua",
@@ -1001,6 +1033,7 @@ export const categories: Category[] = [
         icon: "Waves",
         category: "Cuidado Facial",
         price: 12,
+        price_divisa_bolivar: 13,
         tipo_piel: "Piel grasa / mixta",
         ingredientes_completos: [
           "Agua",
@@ -1027,6 +1060,7 @@ export const categories: Category[] = [
         icon: "Droplets",
         category: "Cuidado Facial",
         price: 7,
+        price_divisa_bolivar: 8.5,
         tipo_piel: "Piel seca / sensible / deshidratada",
         ingredientes_completos: [
           "Agua",
@@ -1061,6 +1095,7 @@ export const categories: Category[] = [
         icon: "Sparkles",
         category: "Cuidado Corporal",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel seca / deshidratada (todo el cuerpo)",
         ingredientes_completos: [
           "Agua",
@@ -1092,6 +1127,7 @@ export const categories: Category[] = [
         icon: "Droplets",
         category: "Cuidado Corporal",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Todos los tipos de piel (especialmente seca)",
         ingredientes_completos: [
           "Agua",
@@ -1123,6 +1159,7 @@ export const categories: Category[] = [
         icon: "Sun",
         category: "Cuidado Corporal",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Todos los tipos (para unificar el tono corporal)",
         ingredientes_completos: [
           "Agua",
@@ -1154,6 +1191,7 @@ export const categories: Category[] = [
         icon: "Zap",
         category: "Cuidado Corporal",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Todos los tipos (rostro y cuerpo)",
         ingredientes_completos: [
           "Aceite de Glycine Soja (Soja)",
@@ -1178,6 +1216,7 @@ export const categories: Category[] = [
         icon: "Moon",
         category: "Cuidado Corporal",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Piel madura / con textura irregular",
         ingredientes_completos: [
           "Aceite de Glycine Soja (Soja)",
@@ -1204,6 +1243,7 @@ export const categories: Category[] = [
         icon: "Scissors",
         category: "Cuidado Corporal",
         price: 8,
+        price_divisa_bolivar: 9,
         tipo_piel: "Todos los tipos (especialmente piel seca)",
         ingredientes_completos: [
           "Sal marina",
