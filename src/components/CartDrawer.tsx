@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { X, Minus, Plus, Trash2, MessageCircle, ShoppingBag } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useBcvRate } from '../context/BcvRateContext';
+import { fetchBcvUsdRate, formatBolivares } from '../services/bcvRate';
 import './CartDrawer.css';
 
 export default function CartDrawer() {
@@ -13,6 +15,7 @@ export default function CartDrawer() {
     removeFromCart,
     setUserData,
   } = useCart();
+  const { rate: bcvRate } = useBcvRate();
 
   const drawerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -33,40 +36,65 @@ export default function CartDrawer() {
   }, [isDrawerOpen, closeDrawer]);
 
   // WhatsApp checkout
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (!userData.name.trim() || !userData.address.trim()) {
       return;
     }
 
-    const baseNumber = "584168279049"; // Número con código de país
+    const baseNumber = '584168279049';
+    const paymentLabel = userData.paymentMethod || 'No especificado';
+    const payInBs = paymentLabel === 'Pago Móvil';
 
-    // const paymentDetails: Record<string, string> = {
-    //   'Pago Móvil': '',
-    //   'Efectivo': '',
-    //   'PayPal': '',
-    //   'Zelle': '',
-    //   'Binance': '',
-    //   'Zinli': '',
-    //   'Wally': ''
-    // };
+    let usdRate = bcvRate?.usd ?? null;
+    if (payInBs && usdRate == null) {
+      try {
+        const fresh = await fetchBcvUsdRate();
+        usdRate = fresh.usd;
+      } catch {
+        usdRate = null;
+      }
+    }
 
     const itemsText = cart
-      .map(item => `- ${item.name} (x${item.quantity})`)
-      .join('%0A');
+      .map((item) => {
+        if (payInBs && usdRate != null) {
+          const unitBs = item.price_divisa_bolivar * usdRate;
+          const lineBs = unitBs * item.quantity;
+          return `- ${item.name} (x${item.quantity}) — Bs ${formatBolivares(lineBs)}`;
+        }
+        const lineUsd = item.price * item.quantity;
+        return `- ${item.name} (x${item.quantity}) — $${lineUsd}`;
+      })
+      .join('\n');
 
-    const paymentLabel = userData.paymentMethod || 'No especificado';
-    // const accountDetails = userData.paymentMethod ? `%0A*Datos de pago:* ${paymentDetails[userData.paymentMethod]}` : '';
-    const giftText = userData.isGift === 'Sí' ? '%0A*¿Es regalo?:* Sí 🎁' : '';
-    const noteText = userData.note.trim() ? `%0A*Nota:* ${userData.note}` : '';
+    let totalText = '';
+    if (payInBs && usdRate != null) {
+      const totalBs = cart.reduce(
+        (sum, item) => sum + item.price_divisa_bolivar * usdRate! * item.quantity,
+        0,
+      );
+      totalText = `\n*Total:* Bs ${formatBolivares(totalBs)}`;
+    } else {
+      const totalUsd = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      totalText = `\n*Total:* $${totalUsd}`;
+    }
 
-    const message = `*Pedido de Skincare — Prushi Store*%0A%0A` +
-      `*Nombre:* ${userData.name}%0A` +
-      `*Ubicación:* ${userData.address}%0A` +
-      `*Método de pago:* ${paymentLabel}${giftText}%0A%0A` +
-      `*Productos:*%0A${itemsText}%0A%0A` +
+    const giftText = userData.isGift === 'Sí' ? '\n*¿Es regalo?:* Sí 🎁' : '';
+    const noteText = userData.note.trim() ? `\n*Nota:* ${userData.note}` : '';
+
+    const message =
+      `*Pedido de Skincare — Prushi Store*\n\n` +
+      `*Nombre:* ${userData.name}\n` +
+      `*Ubicación:* ${userData.address}\n` +
+      `*Método de pago:* ${paymentLabel}${giftText}\n\n` +
+      `*Productos:*\n${itemsText}\n` +
+      totalText +
       noteText;
 
-    window.open(`https://wa.me/${baseNumber}?text=${message}`, '_blank');
+    window.open(
+      `https://wa.me/${baseNumber}?text=${encodeURIComponent(message)}`,
+      '_blank',
+    );
   };
 
   const isFormValid = userData.name.trim() !== '' && userData.address.trim() !== '';
