@@ -8,20 +8,16 @@ import Footer from './components/Footer';
 import { categories } from './data/products';
 import './App.css';
 
-const DISCOUNT_MODAL_KEY = 'prushi_discount_modal_seen';
-
 function App() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [isDiscountModalOpen, setIsDiscountModalOpen] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(DISCOUNT_MODAL_KEY)) return;
     const timer = window.setTimeout(() => setIsDiscountModalOpen(true), 400);
     return () => window.clearTimeout(timer);
   }, []);
 
   const closeDiscountModal = useCallback(() => {
-    sessionStorage.setItem(DISCOUNT_MODAL_KEY, '1');
     setIsDiscountModalOpen(false);
   }, []);
 
