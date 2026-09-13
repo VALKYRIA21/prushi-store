@@ -1,14 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductCard from './components/ProductCard';
 import CartDrawer from './components/CartDrawer';
+import DiscountModal from './components/DiscountModal';
 import Footer from './components/Footer';
-import {categories } from './data/products';
+import { categories } from './data/products';
 import './App.css';
+
+const DISCOUNT_MODAL_KEY = 'prushi_discount_modal_seen';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState(0);
+  const [isDiscountModalOpen, setIsDiscountModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem(DISCOUNT_MODAL_KEY)) return;
+    const timer = window.setTimeout(() => setIsDiscountModalOpen(true), 400);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const closeDiscountModal = useCallback(() => {
+    sessionStorage.setItem(DISCOUNT_MODAL_KEY, '1');
+    setIsDiscountModalOpen(false);
+  }, []);
 
   return (
     <div className="app">
@@ -38,8 +53,7 @@ function App() {
       <section className="catalog catalog--categories" id="catalogo">
         <div className="catalog__inner">
           <div className="catalog__header">
-            <span className="catalog__label">Categorías</span>
-            <h2 className="catalog__title">Explora por Necesidad</h2>
+            <h2 className="catalog__title">Catálogo</h2>
           </div>
 
           <div className="catalog__tabs">
@@ -64,6 +78,7 @@ function App() {
 
       <Footer />
       <CartDrawer />
+      <DiscountModal isOpen={isDiscountModalOpen} onClose={closeDiscountModal} />
     </div>
   );
 }
