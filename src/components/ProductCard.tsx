@@ -1,6 +1,34 @@
-import { useState, useEffect, useRef } from "react";
-import { X, Plus } from "lucide-react";
-import * as Icons from "lucide-react";
+import { useState, useEffect, useRef, type ComponentType } from "react";
+import {
+  Activity,
+  Coffee,
+  Disc,
+  Droplets,
+  Eye,
+  FileText,
+  Flame,
+  Flower,
+  Grid,
+  Heart,
+  Layers,
+  Leaf,
+  Moon,
+  Package,
+  Plus,
+  RefreshCw,
+  RotateCw,
+  Scissors,
+  Shield,
+  ShieldAlert,
+  Smile,
+  Sparkles,
+  Sun,
+  TrendingUp,
+  Waves,
+  Wind,
+  X,
+  Zap,
+} from "lucide-react";
 import { useCart } from "../context/CartContext";
 import type { Product } from "../context/CartContext";
 import { useBcvRate } from "../context/BcvRateContext";
@@ -16,6 +44,38 @@ interface ProductCardProps {
 function normalizeImageSrc(src: string) {
   return src.startsWith("/") || src.startsWith("http") ? src : `/${src}`;
 }
+
+const productIcons: Record<
+  string,
+  ComponentType<{ size?: number; strokeWidth?: number }>
+> = {
+  Activity,
+  Coffee,
+  Disc,
+  Droplets,
+  Eye,
+  FileText,
+  Flame,
+  Flower,
+  Grid,
+  Heart,
+  Layers,
+  Leaf,
+  Moon,
+  Package,
+  RefreshCw,
+  RotateCw,
+  Scissors,
+  Shield,
+  ShieldAlert,
+  Smile,
+  Sparkles,
+  Sun,
+  TrendingUp,
+  Waves,
+  Wind,
+  Zap,
+};
 
 export default function ProductCard({ product, index }: ProductCardProps) {
   const { addToCart, cart } = useCart();
@@ -38,13 +98,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
     }
   }, [imageSrc]);
 
-  const IconComponent =
-    (
-      Icons as unknown as Record<
-        string,
-        React.ComponentType<{ size?: number; strokeWidth?: number }>
-      >
-    )[product.icon] || Icons.Package;
+  const IconComponent = productIcons[product.icon] || Package;
 
   const handleAdd = () => {
     addToCart(product);
