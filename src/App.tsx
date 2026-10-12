@@ -1,25 +1,14 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductCard from './components/ProductCard';
 import CartDrawer from './components/CartDrawer';
-import DiscountModal from './components/DiscountModal';
 import Footer from './components/Footer';
 import { categories } from './data/products';
 import './App.css';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState(0);
-  const [isDiscountModalOpen, setIsDiscountModalOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setIsDiscountModalOpen(true), 400);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  const closeDiscountModal = useCallback(() => {
-    setIsDiscountModalOpen(false);
-  }, []);
 
   return (
     <div className="app">
@@ -74,7 +63,6 @@ function App() {
 
       <Footer />
       <CartDrawer />
-      <DiscountModal isOpen={isDiscountModalOpen} onClose={closeDiscountModal} />
     </div>
   );
 }

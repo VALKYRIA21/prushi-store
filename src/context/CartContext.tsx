@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react';
 
-import type { Product } from '../data/products';
+import { categories, type Product } from '../data/products';
 
 // Export it again so other files that import it from here don't break
 export type { Product };
@@ -35,12 +35,28 @@ interface CartContextType {
 /* ═══ Context ═══ */
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
+function findCatalogProduct(id: number): Product | undefined {
+  for (const category of categories) {
+    const product = category.products.find((item) => item.id === id);
+    if (product) return product;
+  }
+  return undefined;
+}
+
+function withCurrentPrices(saved: CartItem[]): CartItem[] {
+  return saved.map((item) => {
+    const current = findCatalogProduct(item.id);
+    if (!current) return item;
+    return { ...current, quantity: item.quantity };
+  });
+}
+
 /* ═══ Provider ═══ */
 export function CartProvider({ children }: { children: ReactNode }) {
   // Inicializar carrito desde localStorage
   const [cart, setCart] = useState<CartItem[]>(() => {
     const savedCart = localStorage.getItem('prushi_cart');
-    return savedCart ? JSON.parse(savedCart) : [];
+    return savedCart ? withCurrentPrices(JSON.parse(savedCart)) : [];
   });
 
   // Inicializar datos de usuario desde localStorage

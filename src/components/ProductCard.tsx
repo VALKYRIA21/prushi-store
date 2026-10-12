@@ -28,9 +28,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
   const imageSrc = product.image ? normalizeImageSrc(product.image) : "";
 
   const priceInBs =
-    rate && product.price_divisa_bolivar > 0
-      ? product.price_divisa_bolivar * rate.usd
-      : null;
+    rate && product.price > 0 ? product.price * rate.usd : null;
 
   useEffect(() => {
     setImageLoaded(false);

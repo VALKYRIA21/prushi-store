@@ -58,7 +58,7 @@ export default function CartDrawer() {
     const itemsText = cart
       .map((item) => {
         if (payInBs && usdRate != null) {
-          const unitBs = item.price_divisa_bolivar * usdRate;
+          const unitBs = item.price * usdRate;
           const lineBs = unitBs * item.quantity;
           return `- ${item.name} (x${item.quantity}) — Bs ${formatBolivares(lineBs)}`;
         }
@@ -70,7 +70,7 @@ export default function CartDrawer() {
     let totalText = '';
     if (payInBs && usdRate != null) {
       const totalBs = cart.reduce(
-        (sum, item) => sum + item.price_divisa_bolivar * usdRate! * item.quantity,
+        (sum, item) => sum + item.price * usdRate! * item.quantity,
         0,
       );
       totalText = `\n*Total:* Bs ${formatBolivares(totalBs)}`;
