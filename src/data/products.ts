@@ -110,7 +110,7 @@ export const categories: Category[] = [
         id: 3,
         name: "Sérum Facial de Retinol Concentrado - Global Beauty Care (10 Cápsulas)",
         image: "/assets/img/facial-serum-retinol.webp",
-        stock: 4,
+        stock: 3,
         description:
           "Cápsulas monodosis herméticas que conservan la potencia del retinol puro sin oxidación.",
         icon: "Eye",
@@ -138,7 +138,7 @@ export const categories: Category[] = [
         id: 4,
         name: "Hidratante Calmante Libre de Aceites Anti-Imperfecciones - Global Beauty Care (50ML)",
         image: "/assets/img/blemish-control-oil-free-soothing-moisturizer.webp",
-        stock: 2,
+        stock: 1,
         description:
           "Crema hidratante libre de aceites que calma rojeces gracias al aloe vera y pepino.",
         icon: "Sparkles",
@@ -225,7 +225,7 @@ export const categories: Category[] = [
         id: 7,
         name: "Sérum Potente Concentrado - Global Beauty Care (50ML)",
         image: "/assets/img/power-serum.webp",
-        stock: 4,
+        stock: 3,
         description:
           "Suero concentrado restaurador global que combate múltiples signos del envejecimiento.",
         icon: "Zap",
@@ -367,7 +367,7 @@ export const categories: Category[] = [
         id: 12,
         name: "Sérum con Extracto de Sandía y Niacinamida - Glow Up (30ML)",
         image: "/assets/img/glow-up-serum-watermelon.webp",
-        stock: 3,
+        stock: 2,
         description:
           'Suero hidratante de acabado húmedo ("Dewy") que minimiza la apariencia de poros abiertos.',
         icon: "Heart",
@@ -706,7 +706,7 @@ export const categories: Category[] = [
         id: 22,
         name: "Mascarilla Facial de Arcilla Botánica - Global Beauty Care (3-Pack)",
         image: "/assets/img/clay-face-mask-2.webp",
-        stock: 4,
+        stock: 3,
         description:
           "Set de mascarillas de arcilla con extractos botánicos de cúrcuma, miel, coco y manzanilla.",
         icon: "Flower",
@@ -769,7 +769,7 @@ export const categories: Category[] = [
         id: 23,
         name: "Mascarilla de Arcilla de Higo - Global Beauty Care (1-Pack, 35G)",
         image: "/assets/img/clay-face-mask-fig.webp",
-        stock: 8,
+        stock: 6,
         description:
           "Mascarilla individual de arcilla enriquecida con propiedades antioxidantes y suavizantes del higo.",
         icon: "Flame",
@@ -798,7 +798,7 @@ export const categories: Category[] = [
         id: 24,
         name: "Mascarilla de Arcilla de Miel - Global Beauty Care (1-Pack, 35G)",
         image: "/assets/img/clay-face-mask-honey.webp",
-        stock: 6,
+        stock: 5,
         description:
           "Mascarilla de arcilla nutritiva que combina la limpieza con la alta hidratación de la miel pura.",
         icon: "Disc",
@@ -828,7 +828,7 @@ export const categories: Category[] = [
         id: 25,
         name: "Mascarilla Peel Off de Calabaza - Global Beauty Care (1-Pack, 35G)",
         image: "/assets/img/peel-off-face-mask-pumpkin.webp",
-        stock: 6,
+        stock: 4,
         description:
           "Mascarilla exfoliante peel-off con enzimas de calabaza que remueven impurezas superficiales.",
         icon: "Smile",
@@ -914,7 +914,7 @@ export const categories: Category[] = [
         id: 28,
         name: "Mascarilla de Esencia de Retinol - Global Beauty Care (1-Pack)",
         image: "/assets/img/retinol-essence-mask.webp",
-        stock: 2,
+        stock: 1,
         description:
           "Mascarilla de tejido (Sheet Mask) saturada en esencia de retinol para un shot intensivo antiedad.",
         icon: "FileText",
@@ -944,7 +944,7 @@ export const categories: Category[] = [
         id: 29,
         name: "Mascarilla Sérum Revitalizante Tea Tree Power + Cafeína + B5 (30ML)",
         image: "/assets/img/tea-tree-power-caffeine-b5-revive-serum-mask.webp",
-        stock: 4,
+        stock: 3,
         description:
           "Suero en mascarilla descongestionante. Controla imperfecciones y regula el exceso de brillo.",
         icon: "Coffee",
@@ -1000,7 +1000,7 @@ export const categories: Category[] = [
         name: "Exfoliante Limpiador de Poros Anti-Imperfecciones - Global Beauty Care (74ML)",
         image:
           "/assets/img/exfoliante-limpiador-de-poros-anti-imperfecciones.webp",
-        stock: 1,
+        stock: 0,
         description:
           "Exfoliante microfino con ácido salicílico para limpiar impurezas físicas y puntos negros acumulados.",
         icon: "Scissors",
@@ -1027,7 +1027,7 @@ export const categories: Category[] = [
         id: 32,
         name: "Gel Limpiador Clarificante Libre de Aceites - Global Beauty Care (74ML)",
         image: "/assets/img/gel-limpiador-clarificante-libre-de-aceites.webp",
-        stock: 1,
+        stock: 0,
         description:
           "Gel limpiador espumoso clarificante que remueve impurezas y regula el sebo cutáneo.",
         icon: "Waves",
